@@ -1,4 +1,4 @@
-import { CircleHelp, Eye, Lightbulb, Volume2 } from "lucide-react";
+import { Book, Sunset, Trees, Eye } from "lucide-react";
 import React from "react";
 
 import { cn } from "@/lib/utils";
@@ -8,26 +8,26 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const DATA = [
   {
-    title: "Design Thinking",
+    title: "Sushi Legal",
     description:
-      "We use design thinking to create elegant solutions that are as simple as sushi.",
-    icon: CircleHelp,
+      "Opus RegTech Engine. Automated compliance and regulatory infrastructure for Real World Assets.",
+    icon: Book,
     image:
       "https://cdn.dribbble.com/userupload/17012423/file/original-b32f5cad209e4a8bab9a1e082c9e2459.jpg?resize=1504x1128&vertical=center",
   },
   {
-    title: "System Thinking",
+    title: "Sushi Law",
     description:
-      "Complex systems made simple. We architect solutions that just work.",
-    icon: Volume2,
+      "Integrated Legal Trust Layer. Bridging the gap between software code and legal jurisdictions.",
+    icon: Trees,
     image:
       "https://cdn.dribbble.com/userupload/16387734/file/original-8cc5c9ed54f4efd98fb6bbcdc2c279f3.png?resize=1504x1128&vertical=center",
   },
   {
-    title: "Elegant Solutions",
+    title: "Sushi Kitchen",
     description:
-      "Beautiful software that solves real problems. Simple, clean, effective.",
-    icon: Lightbulb,
+      "RWA Marketplace & Tokenization Factory. Cook up your assets and serve them to the global market.",
+    icon: Sunset,
     image:
       "https://cdn.dribbble.com/userupload/16387735/file/original-f71bd6b43e4c3bfe115005b6fcdd1f72.png?resize=1504x1128&vertical=center",
   },
@@ -35,7 +35,7 @@ const DATA = [
 
 const FeaturesSection = () => {
   return (
-    <section id="optimized-scheduling" className="py-32 max-w-7xl mx-auto">
+    <section id="ecosystem" className="py-32 max-w-7xl mx-auto">
       <div className="">
         <div className=" max-w-7xl mx-auto flex flex-col gap-6  py-4 max-lg:border-x lg:py-8">
           <Badge
@@ -43,13 +43,13 @@ const FeaturesSection = () => {
             className="bg-card w-fit gap-1 px-3 text-sm font-normal tracking-tight shadow-sm"
           >
             <Eye className="size-4" />
-            <span className="">Our Philosophy</span>
+            <span className="">The Trilogy</span>
           </Badge>
           <h2 className="text-3xl leading-tight tracking-tight md:text-4xl lg:text-6xl font-medium">
-            Software as simple as sushi
+            Three pillars, one platform
           </h2>
           <p className="text-muted-foreground max-w-[600px] tracking-[-0.32px]">
-            We combine design and system thinking to craft elegant solutions.
+             A vertically integrated stack for the future of asset management.
           </p>
         </div>
       </div>

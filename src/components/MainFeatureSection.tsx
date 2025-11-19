@@ -8,20 +8,20 @@ const MainFeatureSection = () => {
         <div className="relative grid gap-12 lg:grid-cols-2 lg:gap-7">
           <div className="">
             <span className="mb-4 block font-mono text-lg font-medium">
-              Design Thinking
+              The Sushi Ecosystem
             </span>
             <h1 className="text-7xl font-medium tracking-tight text-white">
-              Simple as sushi, elegant as code
+              Integrated RWA & Legal Tech
             </h1>
             <p className="pt-10 text-lg leading-8 text-gray-100">
-              We use design and system thinking to craft software solutions.
+              Seamlessly connecting Opus RegTech Engine, Legal Trust Layers, and Tokenization Marketplaces.
             </p>
             <div className="mt-10 flex items-center gap-x-6">
               <Button
                 asChild
                 className="h-fit bg-white text-foreground rounded-full px-8 py-4 text-lg font-semibold hover:bg-gray-200 shadow-sm"
               >
-                <a href="#">Get a demo</a>
+                <a href="#ecosystem">Explore Ecosystem</a>
               </Button>
             </div>
           </div>
