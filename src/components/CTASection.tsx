@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 
 const CTASection = () => {
@@ -10,7 +11,7 @@ const CTASection = () => {
               Elegant software, simple as sushi
             </h1>
             <p className="md:text-lg text-white/90 font-medium max-w-2xl mx-auto">
-              Experience design and systems thinking that transform complexity into clarity. Start your journey today—no setup fees, flexible terms, cancel anytime.
+              Experience design and systems thinking that transform complexity into clarity. Start your journey today?no setup fees, flexible terms, cancel anytime.
             </p>
             <div className="mt-11 flex flex-col justify-center gap-2 sm:flex-row">
               <Button size="lg" variant="outline">
