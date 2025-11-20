@@ -7,16 +7,9 @@ import {
   Zap,
 } from "lucide-react";
 
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
-  NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
@@ -67,38 +60,12 @@ const Navbar = ({
   },
   menu = [
     { title: "Home", url: "/" },
-    {
-      title: "Ecosystem",
-      url: "#",
-      items: [
-        {
-          title: "Sushi Legal",
-          description: "Opus RegTech Engine for Compliance.",
-          icon: <Book className="size-5 shrink-0" />,
-          url: "/legal",
-        },
-        {
-          title: "Sushi Law",
-          description: "Integrated Legal Trust Layer.",
-          icon: <Trees className="size-5 shrink-0" />,
-          url: "/law",
-        },
-        {
-          title: "Sushi Kitchen",
-          description: "RWA Marketplace & Tokenization.",
-          icon: <Sunset className="size-5 shrink-0" />,
-          url: "/kitchen",
-        },
-      ],
-    },
-    {
-      title: "Platform",
-      url: "#platform",
-    },
-    {
-      title: "Resources",
-      url: "#resources",
-    },
+    { title: "Aegis Core", url: "/aegis-core", icon: <CirclePoundSterling className="size-5 shrink-0" /> },
+    { title: "Sushi Kitchen", url: "/kitchen", icon: <Sunset className="size-5 shrink-0" /> },
+    { title: "Sushi Legal", url: "/legal", icon: <Book className="size-5 shrink-0" /> },
+    { title: "Sushi Law", url: "/law", icon: <Trees className="size-5 shrink-0" /> },
+    { title: "Aegis Pro", url: "/aegis-pro", icon: <Zap className="size-5 shrink-0" /> },
+    { title: "Resources", url: "/resources" },
   ],
   auth = {
     login: { title: "Client Portal", url: "#" },
@@ -185,29 +152,13 @@ const Navbar = ({
 };
 
 const renderMenuItem = (item: MenuItem) => {
-  if (item.items) {
-    return (
-      <NavigationMenuItem key={item.title}>
-        <NavigationMenuTrigger className="text-base">
-          {item.title}
-        </NavigationMenuTrigger>
-        <NavigationMenuContent className="bg-popover text-popover-foreground">
-          {item.items.map((subItem) => (
-            <NavigationMenuLink asChild key={subItem.title} className="w-80">
-              <SubMenuLink item={subItem} />
-            </NavigationMenuLink>
-          ))}
-        </NavigationMenuContent>
-      </NavigationMenuItem>
-    );
-  }
-
   return (
     <NavigationMenuItem key={item.title}>
       <NavigationMenuLink
         href={item.url}
-        className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-base font-medium transition-colors hover:bg-muted hover:text-accent-foreground"
+        className="group inline-flex h-10 w-max items-center justify-center gap-2 rounded-md bg-background px-4 py-2 text-base font-medium transition-colors hover:bg-muted hover:text-accent-foreground"
       >
+        {item.icon}
         {item.title}
       </NavigationMenuLink>
     </NavigationMenuItem>
@@ -215,23 +166,13 @@ const renderMenuItem = (item: MenuItem) => {
 };
 
 const renderMobileMenuItem = (item: MenuItem) => {
-  if (item.items) {
-    return (
-      <AccordionItem key={item.title} value={item.title} className="border-b-0">
-        <AccordionTrigger className="text-md py-0 font-semibold hover:no-underline">
-          {item.title}
-        </AccordionTrigger>
-        <AccordionContent className="mt-2">
-          {item.items.map((subItem) => (
-            <SubMenuLink key={subItem.title} item={subItem} />
-          ))}
-        </AccordionContent>
-      </AccordionItem>
-    );
-  }
-
   return (
-    <a key={item.title} href={item.url} className="text-md font-semibold">
+    <a
+      key={item.title}
+      href={item.url}
+      className="flex items-center gap-3 text-md font-semibold"
+    >
+      <span className="text-foreground">{item.icon}</span>
       {item.title}
     </a>
   );

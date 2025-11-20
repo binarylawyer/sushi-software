@@ -51,7 +51,7 @@ const sections = [
 const FooterSection = () => {
   return (
     <section className="py-32 w-full">
-      <div className="container  max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto">
+      <div className="container max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto">
         <footer>
           <div className="grid grid-cols-2 gap-8 lg:grid-cols-4">
             {sections.map((section, sectionIdx) => (
@@ -128,7 +128,7 @@ const FooterSection = () => {
           </div>
           <div className="mt-24 border-t pt-8">
             <p className="text-center text-sm font-medium text-muted-foreground">
-              Â© 2024 Sushi Software. All rights reserved.
+              © 2024 Sushi Software. All rights reserved.
             </p>
           </div>
         </footer>
