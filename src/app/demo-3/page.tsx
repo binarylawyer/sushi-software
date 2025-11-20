@@ -27,7 +27,7 @@ const ecosystemItems = [
   {
     title: "Sushi Kitchen",
     subtitle: "The Factory",
-    desc: "The R&D Lab & IP holder. Builds the proprietary Sushi Stack—Dockerized, privacy-first AI infrastructure powering the ecosystem.",
+    desc: "Design-led R&D and IP holder. Builds the Sushi Stack—Dockerized, privacy-first AI/agentic workflows packaged for any environment.",
     icon: <Cpu className="size-5" />,
     href: "/kitchen",
     tags: ["Docker", "n8n", "Python"],
@@ -35,7 +35,7 @@ const ecosystemItems = [
   {
     title: "Sushi Legal",
     subtitle: "The Architect",
-    desc: "Legal Engineering firm. Designs compliance-as-code schemas (Swiss/Liechtenstein/Delaware) that wrap software in regulatory armor.",
+    desc: "Designs compliance-as-code schemas (Swiss/Liechtenstein/Delaware) so sophisticated AI remains simple, auditable, and regulator-ready.",
     icon: <Shield className="size-5" />,
     href: "/legal",
     tags: ["Structuring", "Compliance", "Risk"],
@@ -43,7 +43,7 @@ const ecosystemItems = [
   {
     title: "Sushi Law",
     subtitle: "The Network",
-    desc: "Directory of curated law firms acting as human oracles. They verify identities without exposing PII.",
+    desc: "Curated human-oracle network. Verifies and attests without exposing PII—keeping workflows elegant and liability contained.",
     icon: <Network className="size-5" />,
     href: "/law",
     tags: ["Verification", "Attestation", "Trust"],
@@ -51,10 +51,10 @@ const ecosystemItems = [
   {
     title: "Aegis Core",
     subtitle: "The Flagship Product",
-    desc: "Institutional-grade RWA marketplace for the art market, proving the power of the Sushi Stack.",
+    desc: "RegTech product demonstrating the stack: compliant marketplaces and agentic automation built with the simplicity of sushi.",
     icon: <Briefcase className="size-5" />,
     href: "/aegis-core",
-    tags: ["RWA", "Liquidity", "Art"],
+    tags: ["RegTech", "Automation", "Compliance"],
   },
 ];
 
@@ -109,9 +109,9 @@ const Hero = () => {
           </h1>
 
           <p className="text-lg text-slate-400 max-w-lg mx-auto md:mx-0">
-            We build the operating system for regulated industries. By fusing legal
-            engineering with containerized AI, we enable legal, healthcare, and
-            finance to adopt automation without sacrificing privacy.
+            We design and ship agentic AI workflows with the simplicity of sushi.
+            Design thinking + systems thinking turn complex compliance into elegant,
+            on-prem automation for legal, healthcare, and finance.
           </p>
 
           <div className="flex flex-col gap-4 sm:flex-row sm:justify-center md:justify-start">
@@ -172,8 +172,8 @@ const ThePlatform = () => (
             </h2>
             <div className="w-16 h-1 bg-indigo-500 mb-6" />
             <p className="text-lg text-slate-600">
-              A decentralized conglomerate designed to solve the privacy/transparency
-              paradox across multiple industries.
+              A design-led, modular ecosystem for regulated AI. We keep the
+              simplicity of sushi while solving privacy/transparency across industries.
             </p>
           </div>
 
@@ -279,8 +279,8 @@ const TechStack = () => (
           </div>
           <h3 className="font-bold text-slate-900 mb-2">Dockerized Microservices</h3>
           <p className="text-sm text-slate-600">
-            Modular rolls of software. Complex AI tools (LLMs, vector DBs) packaged
-            into deployable containers that run anywhere.
+            Modular rolls of software. Agentic workflows and AI tools packaged into
+            deployable containers that run anywhere with minimal setup.
           </p>
         </div>
         <div className="p-6 bg-slate-50 rounded-xl border border-slate-100">
@@ -289,8 +289,8 @@ const TechStack = () => (
           </div>
           <h3 className="font-bold text-slate-900 mb-2">n8n Orchestration</h3>
           <p className="text-sm text-slate-600">
-            The nervous system. Low-code workflows connecting legal logic to
-            blockchain execution and AI inference.
+            The nervous system. Low-code workflows connecting legal logic to AI
+            inference and systems automation.
           </p>
         </div>
         <div className="p-6 bg-slate-50 rounded-xl border border-slate-100">
@@ -299,7 +299,7 @@ const TechStack = () => (
           </div>
           <h3 className="font-bold text-slate-900 mb-2">Qdrant & GraphRAG</h3>
           <p className="text-sm text-slate-600">
-            The brain. Advanced vector search and RAG powering the Profiler and
+            The brain. Advanced vector search and RAG powering Profiler and agentic
             discovery engines.
           </p>
         </div>
@@ -338,12 +338,141 @@ const Footer = () => (
   </footer>
 );
 
+const Explainer = () => (
+  <section className="w-full bg-white py-16 border-y border-slate-200">
+    <div className="container max-w-6xl px-6 mx-auto text-center space-y-4">
+      <p className="text-sm font-bold uppercase tracking-wide text-indigo-600">
+        The simplicity of sushi
+      </p>
+      <h2 className="text-3xl md:text-4xl font-bold text-slate-900">
+        Design thinking + systems thinking → elegant AI automation
+      </h2>
+      <p className="text-slate-600 max-w-3xl mx-auto">
+        We keep sophisticated, regulated workflows as simple as sushi—concise, intentional,
+        and repeatable. AI agentic workflows are packaged, on-prem friendly, and auditable.
+      </p>
+      <div className="mt-10 grid gap-4 md:grid-cols-3">
+        {[
+          {
+            title: "Bring AI to the data",
+            desc: "On-prem/edge containers. No PII leaves. Minimal setup for maximal control.",
+          },
+          {
+            title: "Design the workflows",
+            desc: "Agentic flows and HITL checkpoints; policy as code; clear audit trails.",
+          },
+          {
+            title: "Enforce in code",
+            desc: "Attestations, claims, and permissions baked into automation for compliance-grade reliability.",
+          },
+        ].map((item) => (
+          <div
+            key={item.title}
+            className="rounded-xl border border-slate-200 bg-white p-6 text-left shadow-sm"
+          >
+            <h3 className="text-lg font-bold text-slate-900 mb-2">{item.title}</h3>
+            <p className="text-sm text-slate-600 leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+);
+
+const ProductsServices = () => (
+  <section className="w-full py-16 bg-slate-50 border-b border-slate-200">
+    <div className="container max-w-6xl px-6 mx-auto">
+      <div className="mb-8 text-center">
+        <p className="text-sm font-bold uppercase tracking-wide text-indigo-600">
+          Products & Services
+        </p>
+        <h2 className="text-3xl md:text-4xl font-bold text-slate-900">
+          Beyond Aegis: the full Sushi portfolio
+          </h2>
+        <p className="text-slate-600 max-w-3xl mx-auto">
+          RegTech, agentic automation, and compliance design systems for legal, healthcare, finance,
+          and more.
+        </p>
+      </div>
+      <div className="grid gap-6 md:grid-cols-3">
+        {[
+          {
+            title: "Agentic Workflows",
+            desc: "AI agents + HITL checkpoints delivered through n8n orchestration and containerized services.",
+          },
+          {
+            title: "Compliance Design System",
+            desc: "Blueprints, schemas, and liability firebreaks to keep automation audit-ready.",
+          },
+          {
+            title: "RegTech Products",
+            desc: "Aegis Core, bespoke deployments, and verticalized solutions built on the Sushi Stack.",
+          },
+        ].map((item) => (
+          <div key={item.title} className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+            <h3 className="text-lg font-bold text-slate-900 mb-2">{item.title}</h3>
+            <p className="text-sm text-slate-600 leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+);
+
+const ProofCTA = () => (
+  <section className="w-full py-16 bg-white border-t border-slate-200">
+    <div className="container max-w-6xl px-6 mx-auto grid gap-10 md:grid-cols-2 items-center">
+      <div className="space-y-3">
+        <p className="text-sm font-bold uppercase tracking-wide text-indigo-600">
+          Why we stay simple
+        </p>
+        <h3 className="text-3xl font-bold text-slate-900">
+          Complex regulation, simple delivery
+        </h3>
+        <p className="text-slate-600">
+          Design thinking reduces friction; systems thinking ensures reliability. We package AI
+          automation so regulated teams can deploy fast without adding risk.
+        </p>
+        <div className="flex flex-wrap gap-3 text-sm text-slate-700">
+          <span className="rounded-full bg-slate-100 px-3 py-1">On-prem friendly</span>
+          <span className="rounded-full bg-slate-100 px-3 py-1">No PII custody</span>
+          <span className="rounded-full bg-slate-100 px-3 py-1">Audit-ready</span>
+          <span className="rounded-full bg-slate-100 px-3 py-1">Agentic + HITL</span>
+        </div>
+      </div>
+      <div className="rounded-2xl border border-slate-200 bg-slate-50 p-8 shadow-sm">
+        <h4 className="text-xl font-bold text-slate-900 mb-3">Ready to see the stack?</h4>
+        <p className="text-sm text-slate-600 mb-6">
+          We’ll tailor a design + systems walkthrough for your team and vertical—legal, healthcare, finance, or beyond.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-3">
+          <a
+            href="/contact-sales"
+            className="inline-flex items-center justify-center rounded bg-indigo-600 px-4 py-3 text-sm font-bold text-white shadow hover:bg-indigo-500 transition"
+          >
+            Book a session
+          </a>
+          <a
+            href="/kitchen"
+            className="inline-flex items-center justify-center rounded border border-slate-200 bg-white px-4 py-3 text-sm font-bold text-slate-900 hover:bg-slate-100 transition"
+          >
+            Explore Sushi Stack
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+);
+
 export default function DemoThreePage() {
   return (
     <main className="flex w-full flex-col font-sans selection:bg-indigo-100 selection:text-indigo-900">
       <Hero />
+      <Explainer />
       <ThePlatform />
       <TechStack />
+      <ProductsServices />
+      <ProofCTA />
       <Footer />
     </main>
   );
