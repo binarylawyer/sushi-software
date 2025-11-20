@@ -40,14 +40,6 @@ const sections = [
       { name: "Partners", href: "/partners" },
     ],
   },
-  {
-    title: "Connect",
-    links: [
-      { name: "Contact Sales", href: "/contact-sales" },
-      { name: "Support", href: "/support" },
-      { name: "Partners", href: "/partners" },
-    ],
-  },
 ];
 
 const FooterSection = () => {
@@ -130,7 +122,7 @@ const FooterSection = () => {
           </div>
           <div className="mt-24 border-t pt-8">
             <p className="text-center text-sm font-medium text-muted-foreground">
-              © 2024 Sushi Software. All rights reserved.
+              Ã‚Â© 2024 Sushi Software. All rights reserved.
             </p>
           </div>
         </footer>
