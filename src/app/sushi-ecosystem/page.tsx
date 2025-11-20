@@ -6,7 +6,7 @@ const COMPANIES = [
     name: "Sushi Kitchen",
     description:
       "The IP and infrastructure factory: Dockerized Sushi Stack, n8n orchestration, OCR/RAG Profiler, and modular Rolls/Combos/Platters.",
-    href: "https://sushikitchen.io",
+    href: "/kitchen",
     bullets: [
       "Licensed stack with radical modularity",
       "RAG lead-gen (Profiler) and workflow automation",
@@ -17,7 +17,7 @@ const COMPANIES = [
     name: "Sushi Legal",
     description:
       "Compliance-as-code blueprints: dual-domicile architecture, reliance letters, indemnified member-firm MSAs, and compliance passports.",
-    href: "https://sushi.legal",
+    href: "/legal",
     bullets: [
       "Swiss/Liechtenstein firebreak + US Compliance Fortress",
       "Reliance Letter / Trusted Issuer standards",
@@ -28,7 +28,7 @@ const COMPANIES = [
     name: "Sushi Law",
     description:
       "Human-oracle network of vetted law firms issuing on-chain attestations while keeping PII inside privilege walls.",
-    href: "https://sushi.law",
+    href: "/law",
     bullets: [
       "Design-partner firms for art/RWA compliance",
       "Tiered vetting SLAs with indemnity",
