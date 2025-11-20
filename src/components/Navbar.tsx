@@ -77,25 +77,27 @@ const Navbar = ({
 }: Navbar1Props) => {
   return (
     <section className="py-4 sticky top-0 z-50 bg-background ">
-      <div className="container max-w-6xl items-center mx-auto ">
+      <div className="container max-w-7xl items-center mx-auto px-6">
         {/* Desktop Menu */}
-        <nav className="hidden justify-between lg:flex">
-          <div className="flex items-center gap-6">
-            {/* Logo */}
-            <a href={logo.url} className="flex items-center gap-2">
-              <CirclePoundSterling className="text-blue-500 size-6" />
-              <span className="text-lg font-semibold tracking-tighter">
-                {logo.title}
-              </span>
-            </a>
-            <div className="flex items-center">
-              <NavigationMenu>
-                <NavigationMenuList>
-                  {menu.map((item) => renderMenuItem(item))}
-                </NavigationMenuList>
-              </NavigationMenu>
-            </div>
+        <nav className="hidden lg:flex items-center gap-6">
+          {/* Logo */}
+          <a href={logo.url} className="flex items-center gap-2">
+            <CirclePoundSterling className="text-blue-500 size-6" />
+            <span className="text-lg font-semibold tracking-tighter">
+              {logo.title}
+            </span>
+          </a>
+
+          {/* Centered menu */}
+          <div className="flex flex-1 justify-center">
+            <NavigationMenu>
+              <NavigationMenuList>
+                {menu.map((item) => renderMenuItem(item))}
+              </NavigationMenuList>
+            </NavigationMenu>
           </div>
+
+          {/* CTA */}
           <div className="flex gap-2">
             <Button asChild size="sm" className="w-32 h-10">
               <a href={auth.signup.url}>{auth.signup.title}</a>
