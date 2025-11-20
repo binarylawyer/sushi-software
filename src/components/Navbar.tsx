@@ -56,7 +56,6 @@ const Navbar = ({
     title: "Sushi Software",
   },
   menu = [
-    { title: "Home", url: "/" },
     {
       title: "Sushi Ecosystem",
       url: "/sushi-ecosystem",

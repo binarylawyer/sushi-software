@@ -12,39 +12,40 @@ const sections = [
   {
     title: "Solutions",
     links: [
-      { name: "Overview", href: "#" },
-      { name: "Services", href: "#" },
-      { name: "Case Studies", href: "#" },
-      { name: "Approach", href: "#" },
-      { name: "Integrations", href: "#" },
-      { name: "Consulting", href: "#" },
+      { name: "Ecosystem", href: "/sushi-ecosystem" },
+      { name: "Aegis Core", href: "/aegis-core" },
+      { name: "Sushi Kitchen", href: "/kitchen" },
+      { name: "Sushi Legal", href: "/legal" },
+      { name: "Sushi Law", href: "/law" },
+      { name: "Aegis Pro", href: "/aegis-pro" },
     ],
   },
   {
     title: "Company",
     links: [
-      { name: "About", href: "#" },
-      { name: "Team", href: "#" },
-      { name: "Blog", href: "#" },
-      { name: "Careers", href: "#" },
-      { name: "Contact", href: "#" },
-      { name: "Privacy", href: "#" },
+      { name: "About", href: "/about" },
+      { name: "Team", href: "/team" },
+      { name: "Careers", href: "/careers" },
+      { name: "Contact", href: "/contact-sales" },
+      { name: "Privacy", href: "/privacy" },
     ],
   },
   {
     title: "Resources",
     links: [
-      { name: "Help", href: "#" },
-      { name: "Support", href: "#" },
-      { name: "Partners", href: "#" },
+      { name: "Blog", href: "/blog" },
+      { name: "Case Studies", href: "/case-studies" },
+      { name: "Help", href: "/help" },
+      { name: "Support", href: "/support" },
+      { name: "Partners", href: "/partners" },
     ],
   },
   {
     title: "Connect",
     links: [
-      { name: "Twitter", href: "#" },
-      { name: "Instagram", href: "#" },
-      { name: "LinkedIn", href: "#" },
+      { name: "Contact Sales", href: "/contact-sales" },
+      { name: "Support", href: "/support" },
+      { name: "Partners", href: "/partners" },
     ],
   },
 ];
@@ -129,7 +130,7 @@ const FooterSection = () => {
           </div>
           <div className="mt-24 border-t pt-8">
             <p className="text-center text-sm font-medium text-muted-foreground">
-              ? 2024 Sushi Software. All rights reserved.
+              © 2024 Sushi Software. All rights reserved.
             </p>
           </div>
         </footer>
