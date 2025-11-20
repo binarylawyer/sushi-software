@@ -6,7 +6,7 @@ export default function Page() {
       <section className="w-full bg-gradient-to-b from-background via-muted/40 to-background py-16">
         <div className="container max-w-5xl px-6 mx-auto flex flex-col gap-4 text-center">
           <h1 className="text-4xl md:text-5xl font-semibold tracking-tight">About Sushi Software</h1>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">Sushi Software unites the Sushi ecosystem?Kitchen, Legal, Law, and Aegis products?to deliver double-blind compliance and design-first RWA experiences without ever holding PII.</p>
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">Sushi Software unites the Sushi ecosystem — Kitchen, Legal, Law, and Aegis products — to deliver double-blind compliance and design-first RWA experiences without ever holding PII.</p>
         </div>
       </section>
       <section className="w-full pb-12">
