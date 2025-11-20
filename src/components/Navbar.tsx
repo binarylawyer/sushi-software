@@ -10,6 +10,7 @@ import {
 import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
+  NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
@@ -60,11 +61,18 @@ const Navbar = ({
   },
   menu = [
     { title: "Home", url: "/" },
-    { title: "Sushi Ecosystem", url: "/sushi-ecosystem", icon: <Zap className="size-5 shrink-0" /> },
+    {
+      title: "Sushi Ecosystem",
+      url: "/sushi-ecosystem",
+      icon: <Zap className="size-5 shrink-0" />,
+      items: [
+        { title: "Overview", url: "/sushi-ecosystem", description: "Platform for simplicity across the Sushi brands." },
+        { title: "Sushi Kitchen", url: "/kitchen", icon: <Sunset className="size-5 shrink-0" />, description: "IP and infra factory." },
+        { title: "Sushi Legal", url: "/legal", icon: <Book className="size-5 shrink-0" />, description: "Compliance-as-code blueprints." },
+        { title: "Sushi Law", url: "/law", icon: <Trees className="size-5 shrink-0" />, description: "Human-oracle network of firms." },
+      ],
+    },
     { title: "Aegis Core", url: "/aegis-core", icon: <CirclePoundSterling className="size-5 shrink-0" /> },
-    { title: "Sushi Kitchen", url: "/kitchen", icon: <Sunset className="size-5 shrink-0" /> },
-    { title: "Sushi Legal", url: "/legal", icon: <Book className="size-5 shrink-0" /> },
-    { title: "Sushi Law", url: "/law", icon: <Trees className="size-5 shrink-0" /> },
     { title: "Aegis Pro", url: "/aegis-pro", icon: <Zap className="size-5 shrink-0" /> },
     { title: "Resources", url: "/resources" },
   ],
@@ -149,6 +157,26 @@ const Navbar = ({
 };
 
 const renderMenuItem = (item: MenuItem) => {
+  if (item.items && item.items.length > 0) {
+    return (
+      <NavigationMenuItem key={item.title}>
+        <NavigationMenuTrigger className="inline-flex gap-2 text-base">
+          {item.icon}
+          {item.title}
+        </NavigationMenuTrigger>
+        <NavigationMenuContent className="bg-popover text-popover-foreground">
+          <div className="grid w-[360px] gap-1 p-3">
+            {item.items.map((sub) => (
+              <NavigationMenuLink asChild key={sub.title}>
+                <SubMenuLink item={sub} />
+              </NavigationMenuLink>
+            ))}
+          </div>
+        </NavigationMenuContent>
+      </NavigationMenuItem>
+    );
+  }
+
   return (
     <NavigationMenuItem key={item.title}>
       <NavigationMenuLink
@@ -163,6 +191,32 @@ const renderMenuItem = (item: MenuItem) => {
 };
 
 const renderMobileMenuItem = (item: MenuItem) => {
+  if (item.items && item.items.length > 0) {
+    return (
+      <div key={item.title} className="flex flex-col gap-3">
+        <div className="flex items-center gap-3 text-md font-semibold">
+          <span className="text-foreground">{item.icon}</span>
+          {item.title}
+        </div>
+        <div className="ml-2 flex flex-col gap-2">
+          {item.items.map((sub) => (
+            <a
+              key={sub.title}
+              href={sub.url}
+              className="flex items-start gap-2 text-sm text-muted-foreground hover:text-foreground"
+            >
+              {sub.icon && <span className="text-foreground">{sub.icon}</span>}
+              <span>
+                <div className="font-semibold text-foreground">{sub.title}</div>
+                {sub.description && <div className="text-xs text-muted-foreground">{sub.description}</div>}
+              </span>
+            </a>
+          ))}
+        </div>
+      </div>
+    );
+  }
+
   return (
     <a
       key={item.title}
