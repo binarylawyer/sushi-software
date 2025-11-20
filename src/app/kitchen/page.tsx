@@ -11,7 +11,11 @@ export default function KitchenPage() {
         <p className="text-xl text-muted-foreground max-w-2xl mb-8 px-4">
           RWA Marketplace & Tokenization Factory. Cook up your assets and serve them to the global market.
         </p>
-        <Button size="lg" className="rounded-full">Enter the Kitchen</Button>
+        <Button size="lg" className="rounded-full" asChild>
+          <a href="https://sushikitchen.io" target="_blank" rel="noreferrer">
+            Visit SushiKitchen.io
+          </a>
+        </Button>
       </div>
       <FooterSection />
     </main>

@@ -13,7 +13,11 @@ export default function LegalPage() {
         <p className="text-xl text-muted-foreground max-w-2xl mb-8 px-4">
           The Opus RegTech Engine. Automated compliance and regulatory infrastructure for Real World Assets.
         </p>
-        <Button size="lg" className="rounded-full">Explore Opus Engine</Button>
+        <Button size="lg" className="rounded-full" asChild>
+          <a href="https://sushi.legal" target="_blank" rel="noreferrer">
+            Visit Sushi.legal
+          </a>
+        </Button>
       </div>
       <FooterSection />
     </main>

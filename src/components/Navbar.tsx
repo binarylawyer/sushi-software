@@ -60,6 +60,7 @@ const Navbar = ({
   },
   menu = [
     { title: "Home", url: "/" },
+    { title: "Sushi Ecosystem", url: "/sushi-ecosystem", icon: <Zap className="size-5 shrink-0" /> },
     { title: "Aegis Core", url: "/aegis-core", icon: <CirclePoundSterling className="size-5 shrink-0" /> },
     { title: "Sushi Kitchen", url: "/kitchen", icon: <Sunset className="size-5 shrink-0" /> },
     { title: "Sushi Legal", url: "/legal", icon: <Book className="size-5 shrink-0" /> },

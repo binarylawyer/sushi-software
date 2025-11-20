@@ -11,7 +11,11 @@ export default function LawPage() {
         <p className="text-xl text-muted-foreground max-w-2xl mb-8 px-4">
           The Integrated Legal Trust Layer. Bridging the gap between software code and legal jurisdictions.
         </p>
-        <Button size="lg" className="rounded-full">Consult Legal Engineering</Button>
+        <Button size="lg" className="rounded-full" asChild>
+          <a href="https://sushi.law" target="_blank" rel="noreferrer">
+            Visit Sushi.law
+          </a>
+        </Button>
       </div>
       <FooterSection />
     </main>
