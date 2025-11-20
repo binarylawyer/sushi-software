@@ -1,3 +1,5 @@
+import { FooterSection } from "@/components/FooterSection";
+
 export default function Page() {
   return (
     <main className="w-full flex flex-col items-center overflow-hidden">
@@ -7,11 +9,33 @@ export default function Page() {
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">Quick guidance on using the Sushi ecosystem.</p>
         </div>
       </section>
+      <section className="w-full pb-12">
+        <div className="container max-w-5xl px-6 mx-auto text-center">
+          <p className="text-sm font-semibold text-primary uppercase tracking-[0.2em]">Overview</p>
+          <p className="text-muted-foreground mt-3">Find your starting point and get pointed to the right property or contact path.</p>
+        </div>
+      </section>
+      <section className="w-full pb-20">
+        <div className="container max-w-5xl px-6 mx-auto grid gap-4 md:grid-cols-3">
+          <div className="rounded-2xl border bg-card p-4 shadow-sm">
+            <h3 className="text-lg font-semibold">Sushi Kitchen</h3>
+            <p className="text-sm text-muted-foreground mt-2">IP + infrastructure factory for compliant automation and RAG.</p>
+          </div>
+          <div className="rounded-2xl border bg-card p-4 shadow-sm">
+            <h3 className="text-lg font-semibold">Sushi Legal</h3>
+            <p className="text-sm text-muted-foreground mt-2">Compliance-as-code blueprints and liability firebreaks.</p>
+          </div>
+          <div className="rounded-2xl border bg-card p-4 shadow-sm">
+            <h3 className="text-lg font-semibold">Sushi Law</h3>
+            <p className="text-sm text-muted-foreground mt-2">Trusted issuers holding PII and posting on-chain claims.</p>
+          </div>
+        </div>
+      </section>
       <section className="w-full pb-20">
         <div className="container max-w-5xl px-6 mx-auto space-y-8">
           <div className="rounded-3xl border bg-card p-6 shadow-sm">
             <h2 className="text-2xl font-semibold mb-3">Getting started</h2>
-            <p className="text-muted-foreground leading-relaxed">Explore the Sushi Ecosystem page to choose the right property; use Contact Sales for tailored guidance.</p>
+            <p className="text-muted-foreground leading-relaxed">Use the Sushi Ecosystem page to choose the right property; Contact Sales for guidance.</p>
           </div>
           <div className="rounded-3xl border bg-card p-6 shadow-sm">
             <h2 className="text-2xl font-semibold mb-3">Brand pages</h2>
@@ -19,10 +43,11 @@ export default function Page() {
           </div>
           <div className="rounded-3xl border bg-card p-6 shadow-sm">
             <h2 className="text-2xl font-semibold mb-3">Need more?</h2>
-            <p className="text-muted-foreground leading-relaxed">Reach out via Contact Sales or Support for specific implementation questions.</p>
+            <p className="text-muted-foreground leading-relaxed">Reach out via Contact Sales or Support for implementation questions.</p>
           </div>
         </div>
       </section>
+      <FooterSection />
     </main>
   );
 }

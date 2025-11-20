@@ -1,3 +1,5 @@
+import { FooterSection } from "@/components/FooterSection";
+
 export default function Page() {
   return (
     <main className="w-full flex flex-col items-center overflow-hidden">
@@ -7,22 +9,45 @@ export default function Page() {
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">Join Sushi Software to build privacy-preserving, compliant rails for art and RWAs.</p>
         </div>
       </section>
+      <section className="w-full pb-12">
+        <div className="container max-w-5xl px-6 mx-auto text-center">
+          <p className="text-sm font-semibold text-primary uppercase tracking-[0.2em]">Overview</p>
+          <p className="text-muted-foreground mt-3">We look for builders who care about craft, clarity, and compliance-first execution.</p>
+        </div>
+      </section>
+      <section className="w-full pb-20">
+        <div className="container max-w-5xl px-6 mx-auto grid gap-4 md:grid-cols-3">
+          <div className="rounded-2xl border bg-card p-4 shadow-sm">
+            <h3 className="text-lg font-semibold">Sushi Kitchen</h3>
+            <p className="text-sm text-muted-foreground mt-2">IP + infrastructure factory for compliant automation and RAG.</p>
+          </div>
+          <div className="rounded-2xl border bg-card p-4 shadow-sm">
+            <h3 className="text-lg font-semibold">Sushi Legal</h3>
+            <p className="text-sm text-muted-foreground mt-2">Compliance-as-code blueprints and liability firebreaks.</p>
+          </div>
+          <div className="rounded-2xl border bg-card p-4 shadow-sm">
+            <h3 className="text-lg font-semibold">Sushi Law</h3>
+            <p className="text-sm text-muted-foreground mt-2">Trusted issuers holding PII and posting on-chain claims.</p>
+          </div>
+        </div>
+      </section>
       <section className="w-full pb-20">
         <div className="container max-w-5xl px-6 mx-auto space-y-8">
           <div className="rounded-3xl border bg-card p-6 shadow-sm">
             <h2 className="text-2xl font-semibold mb-3">What we value</h2>
-            <p className="text-muted-foreground leading-relaxed">Craft, clarity, and compliance-first thinking. We ship fast while honoring the rigor required for regulated domains.</p>
+            <p className="text-muted-foreground leading-relaxed">Quality, speed with rigor, and empathy for regulated users.</p>
           </div>
           <div className="rounded-3xl border bg-card p-6 shadow-sm">
             <h2 className="text-2xl font-semibold mb-3">Open roles</h2>
-            <p className="text-muted-foreground leading-relaxed">We are always meeting engineers, designers, and legal engineers who understand the intersection of UX and regulation.</p>
+            <p className="text-muted-foreground leading-relaxed">Engineers, designers, and legal engineers who understand regulation and UX.</p>
           </div>
           <div className="rounded-3xl border bg-card p-6 shadow-sm">
             <h2 className="text-2xl font-semibold mb-3">How we work</h2>
-            <p className="text-muted-foreground leading-relaxed">Remote-friendly, async-first, with rapid iteration on prototypes and careful validation for production paths.</p>
+            <p className="text-muted-foreground leading-relaxed">Remote-friendly, async-first, rapid prototyping with careful production hardening.</p>
           </div>
         </div>
       </section>
+      <FooterSection />
     </main>
   );
 }
