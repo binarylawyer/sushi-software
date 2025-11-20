@@ -16,7 +16,7 @@ const COMPANIES = [
   {
     name: "Sushi Legal",
     description:
-      "Compliance-as-code and liability firebreaks—dual domicile schemas, reliance letters, indemnity, and passports for automation.",
+      "Compliance-as-code and liability firebreaks?dual domicile schemas, reliance letters, indemnity, and passports for automation.",
     href: "/legal",
     bullets: [
       "CH/LI/DE schemas; compliance-by-design",
@@ -75,7 +75,7 @@ export default function SushiEcosystemPage() {
             Simplicity of sushi across the entire stack
           </h1>
           <p className="text-lg text-slate-300 max-w-3xl mx-auto">
-            Unified design and systems thinking—Kitchen, Legal, Law, Aegis—delivering on-prem, audit-ready AI automation without PII custody.
+            Unified design and systems thinking?Kitchen, Legal, Law, Aegis?delivering on-prem, audit-ready AI automation without PII custody.
           </p>
         </div>
       </section>

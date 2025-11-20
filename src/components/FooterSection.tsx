@@ -41,12 +41,8 @@ const FooterSection = () => {
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           <div className="col-span-2">
             <div className="flex items-center gap-2 mb-6">
-              <div className="size-8 bg-indigo-600 rounded-md flex items-center justify-center text-white font-bold">
-                S
-              </div>
-              <span className="font-bold text-white text-xl">
-                SUSHI<span className="text-slate-500">SOFTWARE</span>
-              </span>
+              <div className="size-8 bg-indigo-600 rounded-md flex items-center justify-center text-white font-bold">S</div>
+              <span className="font-bold text-white text-xl">SUSHI<span className="text-slate-500">SOFTWARE</span></span>
             </div>
             <p className="text-sm text-slate-500 max-w-xs leading-relaxed">
               AI automation with the simplicity of sushi. Privacy by default. Sovereignty by design.
@@ -70,9 +66,7 @@ const FooterSection = () => {
         </div>
 
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="text-xs text-slate-600">
-            © 2025 Sushi Software Inc. All Rights Reserved.
-          </div>
+          <div className="text-xs text-slate-600">(c) 2025 Sushi Software Inc. All Rights Reserved.</div>
           <div className="flex gap-6 text-slate-500">
             <TerminalIcon className="size-4 hover:text-white cursor-pointer transition-colors" />
             <Lock className="size-4 hover:text-white cursor-pointer transition-colors" />
