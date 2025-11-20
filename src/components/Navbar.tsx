@@ -41,10 +41,6 @@ interface Navbar1Props {
   };
   menu?: MenuItem[];
   auth?: {
-    login: {
-      title: string;
-      url: string;
-    };
     signup: {
       title: string;
       url: string;
@@ -77,8 +73,7 @@ const Navbar = ({
     { title: "Resources", url: "/resources" },
   ],
   auth = {
-    login: { title: "Client Portal", url: "#" },
-    signup: { title: "Contact Sales", url: "#" },
+    signup: { title: "Contact Sales", url: "/contact-sales" },
   },
 }: Navbar1Props) => {
   return (
@@ -103,9 +98,6 @@ const Navbar = ({
             </div>
           </div>
           <div className="flex gap-2">
-            <Button asChild variant="outline" size="sm" className="w-32 h-10">
-              <a href={auth.login.url}>{auth.login.title}</a>
-            </Button>
             <Button asChild size="sm" className="w-32 h-10">
               <a href={auth.signup.url}>{auth.signup.title}</a>
             </Button>
@@ -134,14 +126,11 @@ const Navbar = ({
                   </SheetTitle>
                 </SheetHeader>
                   <div className="flex flex-col gap-6 p-4">
-                    <div className="flex w-full flex-col gap-4">
-                      {menu.map((item) => renderMobileMenuItem(item))}
-                    </div>
+                  <div className="flex w-full flex-col gap-4">
+                    {menu.map((item) => renderMobileMenuItem(item))}
+                  </div>
 
                   <div className="flex flex-col gap-3">
-                    <Button asChild variant="outline">
-                      <a href={auth.login.url}>{auth.login.title}</a>
-                    </Button>
                     <Button asChild>
                       <a href={auth.signup.url}>{auth.signup.title}</a>
                     </Button>
