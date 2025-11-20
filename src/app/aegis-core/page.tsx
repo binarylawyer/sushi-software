@@ -1,61 +1,90 @@
 import { FooterSection } from "@/components/FooterSection";
+import { Button } from "@/components/ui/button";
 
 const bullets = [
-  "ERC-3643 compliant transfers with canTransfer gating tied to on-chain attestations.",
-  "Double-blind privacy: platform never touches PII, law firms hold privilege.",
-  "Instant Pay settlement (1.5% fee, ~3-day float) for galleries and artists.",
-  "NFT Vault pattern: ERC-721 master + ERC-3643 fractional, enforced royalties.",
-  "Compliant UX: Bring Your Own Wallet, dynamic buy-state, no user emails stored.",
+  "Agentic compliance flows with ERC-3643 gating and trusted attestations.",
+  "No PII custody; verification stays with counsel; platform enforces rules.",
+  "Instant-settlement logic configurable for different verticals.",
+  "Composable: use as marketplace, automation layer, or RFP/compliance router.",
 ];
 
 export default function AegisCorePage() {
   return (
     <main className="w-full flex flex-col items-center overflow-hidden">
-      <section className="w-full bg-gradient-to-b from-background via-muted/40 to-background py-24">
-        <div className="container max-w-5xl px-6 mx-auto text-center flex flex-col gap-6">
-          <p className="text-sm font-semibold text-primary">Aegis Core</p>
-          <h1 className="text-4xl md:text-5xl font-semibold tracking-tight">
-            The double-blind marketplace for regulated RWAs & art
-          </h1>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Compliance-enforced liquidity without sacrificing privacy. Verification stays with counsel; attestations live on-chain; transfers self-enforce.
-          </p>
-          <div className="flex flex-wrap justify-center gap-3 text-sm">
-            <span className="rounded-full bg-primary/10 px-3 py-1 text-primary">ERC-3643 Identity Registry</span>
-            <span className="rounded-full bg-primary/10 px-3 py-1 text-primary">Instant Pay</span>
-            <span className="rounded-full bg-primary/10 px-3 py-1 text-primary">No PII custody</span>
-            <span className="rounded-full bg-primary/10 px-3 py-1 text-primary">NFT Vault model</span>
-          </div>
+      <section className="relative w-full overflow-hidden bg-slate-950 text-white py-24 border-b border-white/10">
+        <div className="pointer-events-none absolute inset-0 opacity-40">
+          <div className="absolute -left-20 -top-20 h-80 w-80 rounded-full bg-purple-500/20 blur-[100px]" />
+          <div className="absolute bottom-0 right-0 h-80 w-80 rounded-full bg-indigo-600/20 blur-[100px]" />
         </div>
-      </section>
-      <section className="w-full py-16">
-        <div className="container max-w-4xl px-6 mx-auto grid gap-8 md:grid-cols-2">
-          <div className="rounded-2xl border bg-card p-6 shadow-sm">
-            <h2 className="text-xl font-semibold mb-3">What Aegis Core does</h2>
-            <p className="text-muted-foreground leading-relaxed">
-              Provides a compliant, anonymous trading venue for tokenized art and RWAs. Transfers check eligibility on-chain; buyers remain pseudonymous; sellers get immediate settlement options.
+        <div className="container max-w-6xl mx-auto px-6 relative z-10 text-center md:text-left grid md:grid-cols-2 gap-10 items-center">
+          <div className="space-y-6">
+            <div className="inline-flex items-center gap-2 rounded-full border border-purple-500/30 bg-purple-500/10 px-4 py-1 text-xs font-mono font-semibold text-purple-300 uppercase tracking-wider">
+              Aegis Core — RegTech product
+            </div>
+            <h1 className="text-4xl md:text-5xl font-bold leading-tight tracking-tight">
+              Compliant automation, minimal friction
+            </h1>
+            <p className="text-slate-300 text-lg">
+              Aegis Core shows the Sushi architecture in action: agentic workflows with
+              enforced permissions, instant payouts, and zero PII custody.
             </p>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <Button asChild size="lg" className="rounded-full bg-white text-slate-950 hover:bg-slate-200">
+                <a href="/contact-sales">See the on-prem demo</a>
+              </Button>
+              <Button asChild variant="outline" size="lg" className="rounded-full border-white/30 text-white hover:bg-white/10">
+                <a href="/legal">Read security docs</a>
+              </Button>
+            </div>
           </div>
-          <div className="rounded-2xl border bg-card p-6 shadow-sm">
-            <h2 className="text-xl font-semibold mb-3">Why it matters</h2>
-            <p className="text-muted-foreground leading-relaxed">
-              Regulatory rigor with collector-grade privacy solves the art market trilemma—unlocking liquidity while keeping client lists and identities protected.
-            </p>
-          </div>
-        </div>
-      </section>
-      <section className="w-full pb-24">
-        <div className="container max-w-5xl px-6 mx-auto">
-          <div className="rounded-3xl border bg-card p-8 shadow-sm">
-            <h3 className="text-2xl font-semibold mb-4">Core capabilities</h3>
-            <ul className="space-y-3 text-muted-foreground">
+          <div className="rounded-2xl border border-white/10 bg-white/5 p-6 shadow-2xl space-y-4">
+            <h3 className="text-lg font-semibold text-white">Core capabilities</h3>
+            <ul className="space-y-3 text-sm text-slate-200 leading-relaxed">
               {bullets.map((item) => (
                 <li key={item} className="flex items-start gap-3">
-                  <span className="mt-1 size-2 rounded-full bg-primary" />
+                  <span className="mt-1 size-2 rounded-full bg-purple-400" />
                   <span>{item}</span>
                 </li>
               ))}
             </ul>
+          </div>
+        </div>
+      </section>
+
+      <section className="w-full bg-slate-900 text-white py-16 border-b border-white/10">
+        <div className="container max-w-5xl px-6 mx-auto grid gap-8 md:grid-cols-2">
+          <div className="rounded-2xl border border-white/10 bg-white/5 p-6 shadow-sm">
+            <h2 className="text-xl font-semibold mb-3">What Aegis Core does</h2>
+            <p className="text-slate-200 leading-relaxed">
+              Provides compliant, automated flows for regulated markets—double-blind when
+              needed—enforcing eligibility on-chain while keeping identities private.
+            </p>
+          </div>
+          <div className="rounded-2xl border border-white/10 bg-white/5 p-6 shadow-sm">
+            <h2 className="text-xl font-semibold mb-3">Why it matters</h2>
+            <p className="text-slate-200 leading-relaxed">
+              Shows how the Sushi Stack, Legal schemas, and Law attestations converge. A
+              proof point that simplicity and compliance can coexist.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="w-full bg-slate-50 py-16">
+        <div className="container max-w-5xl px-6 mx-auto grid gap-8 md:grid-cols-2">
+          <div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
+            <h3 className="text-2xl font-semibold mb-4">For decision makers</h3>
+            <p className="text-slate-600 leading-relaxed">
+              Compliance-first automation without PII risk; faster settlements; clearer
+              accountability and auditability.
+            </p>
+          </div>
+          <div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
+            <h3 className="text-2xl font-semibold mb-4">For implementers</h3>
+            <p className="text-slate-600 leading-relaxed">
+              Containerized, API-first, and orchestrated via n8n. Claims-driven gating and
+              modular payouts to adapt to any vertical.
+            </p>
           </div>
         </div>
       </section>
