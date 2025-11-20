@@ -16,14 +16,14 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  outputFileTracingRoot: path.resolve(__dirname, '../../'),
+  // Use default output tracing root to avoid path issues in managed environments.
   turbopack: {
     rules: {
       "*.{jsx,tsx}": {
-        loaders: [LOADER]
-      }
-    }
-  }
+        loaders: [LOADER],
+      },
+    },
+  },
 };
 
 export default nextConfig;
