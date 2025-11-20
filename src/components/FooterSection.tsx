@@ -47,7 +47,7 @@ const FooterSection = () => {
     <section className="py-32 w-full">
       <div className="container max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto">
         <footer>
-          <div className="grid grid-cols-2 gap-8 lg:grid-cols-4">
+          <div className="grid grid-cols-2 gap-8 lg:grid-cols-4 justify-items-center">
             {sections.map((section, sectionIdx) => (
               <div key={sectionIdx}>
                 <h3 className="mb-4 font-bold">{section.title}</h3>
